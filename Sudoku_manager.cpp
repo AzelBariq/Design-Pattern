@@ -6,7 +6,7 @@
 void SudokuManager::startSudoku(const std::string& challengeFile) {
     // Meminta pemain memasukkan namanya
     std::string pemainNama;
-    std::cout << "Enter your nama: ";
+    std::cout << "Masukkan nama: ";
     std::cin >> pemainNama;
     setpemainNama(pemainNama); // Mengatur nama pemain
 
