@@ -4,12 +4,12 @@
 #include <vector>
 #include <string>
 
-class Board {
+class Papan {
 private:
     std::vector<std::vector<int>> grid;
 
 public:
-    Board();
+    Papan();
     void print();
     void loadChallenge(const std::string& filename);
     bool isMoveValid(int row, int col, int value);
