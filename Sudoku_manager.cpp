@@ -1,5 +1,5 @@
 #include "sudoku_manager.h"
-#include "board.h"
+#include "papan.h"
 #include "pemain.h"
 #include <iostream>
 
@@ -10,10 +10,10 @@ void SudokuManager::startGame(const std::string& challengeFile) {
     std::cin >> pemainName;
     setpemainName(pemainName); // Mengatur nama pemain
 
-    board.loadChallenge(challengeFile);
+    papan.loadChallenge(challengeFile);
 
     while (!isGameOver()) {
-        board.print(); // Tampilkan papan saat ini.
+        papan.print(); // Tampilkan papan saat ini.
 
         int row, col, value;
 
@@ -23,18 +23,18 @@ void SudokuManager::startGame(const std::string& challengeFile) {
         // Validasi input
         if (row >= 1 && row <= 9 && col >= 1 && col <= 9) {
             // Konversi baris dan kolom menjadi indeks papan yang sesuai.
-            int boardRow = row - 1;
-            int boardCol = col - 1;
+            int papanRow = row - 1;
+            int papanCol = col - 1;
 
             std::cout << "Enter the value (1-9) to place in row " << row << " and column " << col << ": ";
             std::cin >> value;
 
             // Validasi angka yang dimasukkan oleh pemain.
             if (value >= 1 && value <= 9) {
-                if (board.isMoveValid(boardRow, boardCol, value)) {
-                    if (board.getValue(boardRow, boardCol) == 0) {
+                if (papan.isMoveValid(papanRow, papanCol, value)) {
+                    if (papan.getValue(papanRow, papanCol) == 0) {
                         // Update the board based on the player's move
-                        board.updateMove(boardRow, boardCol, value);
+                        papan.updateMove(papanRow, papanCol, value);
                     } else {
                         std::cout << "Cell is already filled. Try again." << std::endl;
                     }
@@ -54,7 +54,7 @@ bool SudokuManager::isGameOver() {
     // Check if there are any empty cells on the Sudoku board
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
-            if (board.getValue(i, j) == 0) {
+            if (papan.getValue(i, j) == 0) {
                 return false;
             }
         }
