@@ -12,8 +12,8 @@ private:
     Pemain pemain;
 
 public:
-    void startGame(const std::string& challengeFile);
-    bool isGameOver();
+    void startSudoku(const std::string& challengeFile);
+    bool isSudokuOver();
     void setPemainName(const std::string& pemainName); // Deklarasi metode setpemainName().
     std::string getPemainName() const; // Deklarasi metode getPemainName() sebagai konstan.
 };
