@@ -3,12 +3,12 @@
 #include <fstream>
 #include <cstdlib>
 
-papan::papan() {
-    // Initialize the papan with zeros
+Papan::Papan() {
+    // Initialize the board with zeros
     grid = std::vector<std::vector<int>>(9, std::vector<int>(9, 0));
 }
 
-void papan::print() {
+void Papan::print() {
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
             std::cout << grid[i][j] << " ";
@@ -17,7 +17,7 @@ void papan::print() {
     }
 }
 
-void papan::loadChallenge(const std::string& filename) {
+void Papan::loadChallenge(const std::string& filename) {
     std::ifstream file(filename);
     if (file.is_open()) {
         for (int i = 0; i < 9; i++) {
@@ -33,11 +33,11 @@ void papan::loadChallenge(const std::string& filename) {
     }
 }
 
-bool papan::isMoveValid(int row, int col, int value) {
+bool Papan::isMoveValid(int row, int col, int value) {
     return isRowValid(row, value) && isColValid(col, value) && isSubgridValid(row, col, value);
 }
 
-bool papan::isRowValid(int row, int value) {
+bool Papan::isRowValid(int row, int value) {
     for (int j = 0; j < 9; j++) {
         if (grid[row][j] == value) {
             return false;
@@ -46,7 +46,7 @@ bool papan::isRowValid(int row, int value) {
     return true;
 }
 
-bool papan::isColValid(int col, int value) {
+bool Papan::isColValid(int col, int value) {
     for (int i = 0; i < 9; i++) {
         if (grid[i][col] == value) {
             return false;
@@ -55,7 +55,7 @@ bool papan::isColValid(int col, int value) {
     return true;
 }
 
-bool papan::isSubgridValid(int row, int col, int value) {
+bool Papan::isSubgridValid(int row, int col, int value) {
     int startRow = (row / 3) * 3;
     int startCol = (col / 3) * 3;
     for (int i = startRow; i < startRow + 3; i++) {
@@ -68,10 +68,10 @@ bool papan::isSubgridValid(int row, int col, int value) {
     return true;
 }
 
-void papan::updateMove(int row, int col, int value) {
+void Papan::updateMove(int row, int col, int value) {
     grid[row][col] = value;
 }
 
-int papan::getValue(int row, int col) {
+int Papan::getValue(int row, int col) {
     return grid[row][col];
 }
