@@ -1,19 +1,19 @@
-#include "player.h"
+#include "pemain.h"
 
-Player::Player() {
+pemain::pemain() {
     // Konstruktor default, tidak ada inisialisasi khusus.
 }
 
-int Player::makeMove() {
+int pemain::makeMove() {
     // Implementasi metode makeMove() seperti sebelumnya.
     // ...
     return 0;
 }
 
-std::string Player::getNama() const {
+std::string pemain::getNama() const {
     return nama;
 }
 
-void Player::setNama(const std::string& playerName) {
-    nama = playerName;
+void pemain::setNama(const std::string& pemainName) {
+    nama = pemainName;
 }
