@@ -1,12 +1,12 @@
 #pragma once
-#ifndef GAME_MANAGER_H
-#define GAME_MANAGER_H
+#ifndef SUDOKU_MANAGER_H
+#define SUDOKU_MANAGER_H
 
 #include "board.h"
 #include "player.h"
 #include <string>
 
-class GameManager {
+class SudokuManager {
 private:
     Board board;
     Player player;
@@ -18,4 +18,4 @@ public:
     std::string getPlayerName() const; // Deklarasi metode getPlayerName() sebagai konstan.
 };
 
-#endif // GAME_MANAGER_H
+#endif // SUDOKU_MANAGER_H
