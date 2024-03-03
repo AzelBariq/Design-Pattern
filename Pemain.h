@@ -1,5 +1,5 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#ifndef PEMAIN_H
+#define PEMAIN_H
 
 #include <string>
 
@@ -14,4 +14,4 @@ private:
     std::string nama; // Atribut string untuk menyimpan nama pemain.
 };
 
-#endif // PLAYER_H
+#endif // PEMAIN_H
