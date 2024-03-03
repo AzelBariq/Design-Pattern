@@ -14,8 +14,8 @@ private:
 public:
     void startSudoku(const std::string& challengeFile);
     bool isSudokuOver();
-    void setPemainName(const std::string& pemainName); // Deklarasi metode setpemainName().
-    std::string getPemainName() const; // Deklarasi metode getPemainName() sebagai konstan.
+    void setPemainNama(const std::string& pemainNama); // Deklarasi metode setpemainName().
+    std::string getPemainNama() const; // Deklarasi metode getPemainName() sebagai konstan.
 };
 
 #endif // SUDOKU_MANAGER_H
