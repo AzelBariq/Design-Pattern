@@ -1,6 +1,6 @@
 #include "papan.cpp"
-#include "player.cpp"
-#include "game_manager.cpp"
+#include "pemain.cpp"
+#include "sudoku_manager.cpp"
 #include <iostream>
 #include <cstdlib> // Untuk menggunakan fungsi acak
 #include <ctime>   // Untuk menginisialisasi generator acak
