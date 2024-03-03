@@ -2,20 +2,20 @@
 #ifndef SUDOKU_MANAGER_H
 #define SUDOKU_MANAGER_H
 
-#include "board.h"
-#include "player.h"
+#include "papan.h"
+#include "pemain.h"
 #include <string>
 
 class SudokuManager {
 private:
-    Board board;
-    Player player;
+    Papan papan;
+    Pemain pemain;
 
 public:
     void startGame(const std::string& challengeFile);
     bool isGameOver();
-    void setPlayerName(const std::string& playerName); // Deklarasi metode setPlayerName().
-    std::string getPlayerName() const; // Deklarasi metode getPlayerName() sebagai konstan.
+    void setPemainName(const std::string& pemainName); // Deklarasi metode setpemainName().
+    std::string getPemainName() const; // Deklarasi metode getPemainName() sebagai konstan.
 };
 
 #endif // SUDOKU_MANAGER_H
