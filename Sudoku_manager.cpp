@@ -3,7 +3,7 @@
 #include "pemain.h"
 #include <iostream>
 
-void SudokuManager::startGame(const std::string& challengeFile) {
+void SudokuManager::startSudoku(const std::string& challengeFile) {
     // Meminta pemain memasukkan namanya
     std::string pemainName;
     std::cout << "Enter your name: ";
@@ -12,7 +12,7 @@ void SudokuManager::startGame(const std::string& challengeFile) {
 
     papan.loadChallenge(challengeFile);
 
-    while (!isGameOver()) {
+    while (!isSudokuOver()) {
         papan.print(); // Tampilkan papan saat ini.
 
         int row, col, value;
@@ -50,7 +50,7 @@ void SudokuManager::startGame(const std::string& challengeFile) {
     }
     std::cout << "Selamat Buat Kamu " << getpemainName() << "! Kamu keren abissss :v !" << std::endl;
 }
-bool SudokuManager::isGameOver() {
+bool SudokuManager::isSudokuOver() {
     // Check if there are any empty cells on the Sudoku board
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
