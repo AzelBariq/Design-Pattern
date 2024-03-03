@@ -1,5 +1,5 @@
-#ifndef BOARD_H
-#define BOARD_H
+#ifndef PAPAN_H
+#define PAPAN_H
 
 #include <vector>
 #include <string>
@@ -20,4 +20,4 @@ public:
     int getValue(int row, int col);
 };
 
-#endif // BOARD_H
+#endif // PAPAN_H
