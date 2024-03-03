@@ -14,6 +14,6 @@ std::string pemain::getNama() const {
     return nama;
 }
 
-void pemain::setNama(const std::string& pemainName) {
-    nama = pemainName;
+void pemain::setNama(const std::string& pemainNama) {
+    nama = pemainNama;
 }
