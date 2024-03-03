@@ -1,14 +1,14 @@
 #include "sudoku_manager.h"
 #include "board.h"
-#include "player.h"
+#include "pemain.h"
 #include <iostream>
 
 void SudokuManager::startGame(const std::string& challengeFile) {
     // Meminta pemain memasukkan namanya
-    std::string playerName;
+    std::string pemainName;
     std::cout << "Enter your name: ";
-    std::cin >> playerName;
-    setPlayerName(playerName); // Mengatur nama pemain
+    std::cin >> pemainName;
+    setpemainName(pemainName); // Mengatur nama pemain
 
     board.loadChallenge(challengeFile);
 
@@ -48,7 +48,7 @@ void SudokuManager::startGame(const std::string& challengeFile) {
             std::cout << "Invalid row or column. Please enter values between 1 and 9." << std::endl;
         }
     }
-    std::cout << "Selamat Buat Kamu " << getPlayerName() << "! Kamu keren abissss :v !" << std::endl;
+    std::cout << "Selamat Buat Kamu " << getpemainName() << "! Kamu keren abissss :v !" << std::endl;
 }
 bool SudokuManager::isGameOver() {
     // Check if there are any empty cells on the Sudoku board
@@ -63,12 +63,12 @@ bool SudokuManager::isGameOver() {
 }
 
 
-// Implementasi metode getPlayerName() untuk mengambil nama pemain.
-std::string SudokuManager::getPlayerName() const {
-    return player.getNama();
+// Implementasi metode getpemainName() untuk mengambil nama pemain.
+std::string SudokuManager::getpemainName() const {
+    return pemain.getNama();
 }
 
-// Implementasi metode setPlayerName().
-void SudokuManager::setPlayerName(const std::string& playerName) {
-    player.setNama(playerName);
+// Implementasi metode setpemainName().
+void SudokuManager::setpemainName(const std::string& pemainName) {
+    pemain.setNama(pemainName);
 }
