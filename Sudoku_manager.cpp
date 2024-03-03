@@ -1,9 +1,9 @@
-#include "game_manager.h"
+#include "sudoku_manager.h"
 #include "board.h"
 #include "player.h"
 #include <iostream>
 
-void GameManager::startGame(const std::string& challengeFile) {
+void SudokuManager::startGame(const std::string& challengeFile) {
     // Meminta pemain memasukkan namanya
     std::string playerName;
     std::cout << "Enter your name: ";
@@ -50,7 +50,7 @@ void GameManager::startGame(const std::string& challengeFile) {
     }
     std::cout << "Selamat Buat Kamu " << getPlayerName() << "! Kamu keren abissss :v !" << std::endl;
 }
-bool GameManager::isGameOver() {
+bool SudokuManager::isGameOver() {
     // Check if there are any empty cells on the Sudoku board
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
@@ -64,11 +64,11 @@ bool GameManager::isGameOver() {
 
 
 // Implementasi metode getPlayerName() untuk mengambil nama pemain.
-std::string GameManager::getPlayerName() const {
+std::string SudokuManager::getPlayerName() const {
     return player.getNama();
 }
 
 // Implementasi metode setPlayerName().
-void GameManager::setPlayerName(const std::string& playerName) {
+void SudokuManager::setPlayerName(const std::string& playerName) {
     player.setNama(playerName);
 }
