@@ -1,6 +1,6 @@
-#include "papan.cpp"
-#include "pemain.cpp"
-#include "sudoku_manager.cpp"
+#include "board.cpp"
+#include "player.cpp"
+#include "game_manager.cpp"
 #include <iostream>
 #include <cstdlib> // Untuk menggunakan fungsi acak
 #include <ctime>   // Untuk menginisialisasi generator acak
@@ -11,8 +11,8 @@ int main() {
 
     // Daftar nama file tantangan
     std::string challengeFiles[] = {
-        "C:\\Users\\Azel Bariq\\Desktop\\sudoku\\Suhdohkuh\\Suhdohkuh\\sudoku2.txt",
-        "C:\\Users\\Azel Bariq\\Desktop\\sudoku\\Suhdohkuh\\Suhdohkuh\kuncisudoku2.txt"
+        "C:\\Users\\Azel Bariq\\Desktop\\sdk\\Suhdohkuh\\sudoku3.txt",
+        "C:\\Users\\Azel Bariq\\Desktop\\sdk\\Suhdohkuh\\kuncisudoku3.txt"
     };
 
     // Memilih secara acak file tantangan dari daftar
@@ -20,9 +20,8 @@ int main() {
 
     std::string challengeFile = challengeFiles[randomIndex];
 
-    SudokuManager sudokuManager;
-    sudokuManager.startSudoku(challengeFile);
+    GameManager gameManager;
+    gameManager.startGame(challengeFile);
 
     return 0;
 }
-
