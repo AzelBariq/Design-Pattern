@@ -20,4 +20,4 @@ public:
     int getValue(int row, int col);
 };
 
-#endif // BOARD_H
+#endif 
