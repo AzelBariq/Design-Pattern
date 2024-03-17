@@ -4,7 +4,7 @@
 #include <cstdlib>
 
 Board::Board() {
-    // Initialize the board with zeros
+    
     grid = std::vector<std::vector<int>>(9, std::vector<int>(9, 0));
 }
 
