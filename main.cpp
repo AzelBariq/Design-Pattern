@@ -11,8 +11,8 @@ int main() {
 
     // Daftar nama file tantangan
     std::string challengeFiles[] = {
-        "C:\\Users\\Azel Bariq\\Desktop\\sdk\\Suhdohkuh\\sudoku3.txt",
-        "C:\\Users\\Azel Bariq\\Desktop\\sdk\\Suhdohkuh\\kuncisudoku3.txt"
+        "C:\\Users\\LOQ\\Documents\\GitHub\\Design-Pattern\\sudoku3.txt",
+        "C:\\Users\\LOQ\\Documents\\GitHub\\Design-Pattern\\kuncisudoku3.txt"
     };
 
     // Memilih secara acak file tantangan dari daftar
