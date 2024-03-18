@@ -48,7 +48,7 @@ void GameManager::startGame(const std::string& challengeFile) {
             std::cout << "Invalid row or column. Please enter values between 1 and 9." << std::endl;
         }
     }
-    std::cout << "Selamat Buat Kamu " << getPlayerName() << "! Good !" << std::endl;
+    std::cout << "Yeay " << getPlayerName() << "! Good !" << std::endl;
 }
 bool GameManager::isGameOver() {
     // Check if there are any empty cells on the Sudoku board
