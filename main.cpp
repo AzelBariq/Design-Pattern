@@ -11,8 +11,7 @@ int main() {
 
     // Daftar nama file tantangan
     std::string challengeFiles[] = {
-        "C:\\Users\\Azel Bariq\\Desktop\\Design-Pattern\\Easy.txt",
-        "C:\\Users\\Azel Bariq\\Desktop\\Design-Pattern\\Normal.txt"
+        "C:\\Users\\Azel Bariq\\Desktop\\Design-Pattern\\Easy.txt"
     };
 
     // Memilih secara acak file tantangan dari daftar
